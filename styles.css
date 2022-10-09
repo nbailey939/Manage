@@ -130,6 +130,14 @@ body {
   color: var(--clr-primary-400);
 }
 
+p:not([class]) {
+  opacity: 0.6;
+  max-width: 37ch;
+}
+p[data-width='wide'] {
+  max-width: 42ch;
+}
+
 /*-- Buttons --*/
 .button {
   display: inline-flex;
@@ -346,6 +354,11 @@ body {
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 3.2em);
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
