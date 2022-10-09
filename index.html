@@ -21,17 +21,42 @@
   <body>
     <header class="primary-header">
       <div class="container">
-        <a href="#"><img src="images/logo.svg" alt="Manage logo" /></a>
-        <nav class="primary-navigation">
-          <ul role="list" class="nav-list" aria-label="primary">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="button">Get Started</button>
+        <!--Navigation-->
+        <div class="nav-wrapper">
+          <a href="#"><img src="images/logo.svg" alt="Manage logo" /></a>
+          <button
+            class="mob-nav-tog"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="hamburger menu"
+              aria-hidden="true"
+              class="icon-hamburger"
+            />
+            <img
+              src="./images/icon-close.svg"
+              alt="hamburger menu"
+              aria-hidden="true"
+              class="icon-close"
+            />
+            <span class="visually-hidden">Menu</span>
+          </button>
+
+          <nav class="primary-navigation" id="primary navigation">
+            <ul role="list" class="nav-list" aria-label="primary">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button display-sm-none display-md-flex">
+            Get Started
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -158,6 +183,7 @@
         </div>
       </div>
     </footer>
+    <!-- JS to control Navigation Mobile Menu -->
     <script src="main.js"></script>
   </body>
 </html>
