@@ -88,7 +88,8 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -549,10 +550,6 @@ input:where([type='text'], [type='email'], ) {
 /*-- Image background --*/
 /*----------------------*/
 
-/* .hero-img {
-  order: -1;
-} */
-
 @media (max-width: 47em) {
   .hero-img {
     order: -1;
@@ -576,6 +573,35 @@ input:where([type='text'], [type='email'], ) {
 @media (min-width: 47em) {
   .hero-img::before {
     width: 48%;
+  }
+}
+/*------------*/
+/*-- Points --*/
+/*------------*/
+
+.sales-points_blog {
+  position: relative;
+}
+
+.sales-points_blog::before {
+  content: url('./images/bg-tablet-pattern.svg');
+  position: absolute;
+  scale: 40%;
+  right: 0;
+  z-index: -1;
+  bottom: 90%;
+  width: 200px;
+}
+
+@media (min-width: 47em) {
+  .sales-points_blog::before {
+    content: url('./images/bg-tablet-pattern.svg');
+    position: absolute;
+    scale: 70%;
+    left: -500px;
+    z-index: -1;
+    top: 42%;
+    width: 100px;
   }
 }
 
